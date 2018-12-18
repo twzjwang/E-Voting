@@ -1,5 +1,7 @@
 .DS_Store
 Ballot/__pycache__/
+__pycache__/
 unblindsigned
 signedfile
 blindmsg
+Config.py
