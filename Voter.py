@@ -18,4 +18,5 @@ if __name__ == '__main__':
     print('Hashed Vote String', hashV)
 
     print('\n***Alice blinds the message***')
-    r = Blind.blind(int(hashV, 16), Blind.Key(Config.Config['blindPublicKeyExponent'], Config.Config['blindModulus']))
+    publicKey = contractInstance.blindPublicKey()
+    r = Blind.blind(int(hashV, 16), Blind.Key(int(publicKey[0]), int(publicKey[1])))
