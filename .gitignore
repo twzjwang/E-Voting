@@ -1,4 +1,5 @@
 .DS_Store
+Ballot/__pycache__/
 unblindsigned
 signedfile
 blindmsg
