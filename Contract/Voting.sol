@@ -1,7 +1,9 @@
 pragma solidity ^0.5.0;
 contract Voting {
-    address organizer;
-    uint blindMessageID;
+    address public organizer;
+    uint public blindMessageID;
+    string public blindPublicKey;
+    string public blindModulus;
     
     struct Ballot{
         string VoteString;
@@ -27,6 +29,8 @@ contract Voting {
     {
         organizer = msg.sender;
         blindMessageID = 0;
+        blindPublicKey = "5667400196177832758329878658058841222486294082556628643521591018277351809425";
+        blindModulus = "29952708105638190336218986723988848558180452566729640097296222007752071641411";
     }
     
     function sendBlindMessage (string memory msg) 
