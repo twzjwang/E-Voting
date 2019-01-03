@@ -1,166 +1,17 @@
-providerURL = ""
+providerURL = "http://127.0.0.1:8545"
 
 Config = dict(
-    organizerAddress = "",
-    voterAddress = "",
+    organizerAddress = '0x3a7cba667456be730283fd0b75ab25e78be97624',
+    voterAddress = '0x8747e646114a6d78a160ad6017a34effc4183b5b',
+)
+
+organizerConfig = dict(
+    blindPrivateKeyExponent = 5439192500993052715982587491367355095156341252223746701782149193769052403437,
+    organizerPrivateKey = '35c22cf86310a186282c935276de99858d52af799b85022d818edf46f46cdbbe',
 )
 
 voterConfig = dict(
     voterChoice = 1,
-    voterPrivateKey = "",
+    voterPrivateKey1 = '0xdfe245e686ab178f1856055c1503b8bf769de7378fe12968bfe58285c63e76ef',
+    voterPrivateKey2 = '0x4f16af92cac85c85c863c853751b1e5ca5ba1ba0c16b926130124609c0de7e8b',
 )
-
-organizerConfig = dict(
-    blindPrivateKeyExponent = ,
-    voterPrivateKey = "",
-)
-
-contractAddress = ""
-
-contractABI = [
-	{
-		"constant": False,
-		"inputs": [
-			{
-				"name": "VoteString",
-				"type": "string"
-			},
-			{
-				"name": "signedVoteString",
-				"type": "string"
-			}
-		],
-		"name": "sendBallot",
-		"outputs": [],
-		"payable": False,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": False,
-		"inputs": [
-			{
-				"name": "msg",
-				"type": "string"
-			}
-		],
-		"name": "sendBlindMessage",
-		"outputs": [
-			{
-				"name": "id",
-				"type": "uint256"
-			}
-		],
-		"payable": False,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": False,
-		"inputs": [
-			{
-				"name": "id",
-				"type": "uint256"
-			},
-			{
-				"name": "msg",
-				"type": "string"
-			}
-		],
-		"name": "sendSignedBlindMessage",
-		"outputs": [],
-		"payable": False,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"name": "exponent",
-				"type": "string"
-			},
-			{
-				"name": "modulus",
-				"type": "string"
-			}
-		],
-		"payable": False,
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"anonymous": False,
-		"inputs": [
-			{
-				"indexed": False,
-				"name": "id",
-				"type": "uint256"
-			},
-			{
-				"indexed": False,
-				"name": "msg",
-				"type": "string"
-			}
-		],
-		"name": "newBlindMessage",
-		"type": "event"
-	},
-	{
-		"anonymous": False,
-		"inputs": [
-			{
-				"indexed": False,
-				"name": "id",
-				"type": "uint256"
-			},
-			{
-				"indexed": False,
-				"name": "msg",
-				"type": "string"
-			}
-		],
-		"name": "newSignedBlindMessage",
-		"type": "event"
-	},
-	{
-		"constant": True,
-		"inputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "ballots",
-		"outputs": [
-			{
-				"name": "VoteString",
-				"type": "string"
-			},
-			{
-				"name": "signedVoteString",
-				"type": "string"
-			}
-		],
-		"payable": False,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": True,
-		"inputs": [],
-		"name": "blindPublicKey",
-		"outputs": [
-			{
-				"name": "exponent",
-				"type": "string"
-			},
-			{
-				"name": "modulus",
-				"type": "string"
-			}
-		],
-		"payable": False,
-		"stateMutability": "view",
-		"type": "function"
-	}
-]
