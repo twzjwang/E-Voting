@@ -2,6 +2,7 @@
 An E-Voting System with Blockchain, Smart Contract
 
 # Install
+* Install [ganache-cli](https://github.com/trufflesuite/ganache-cli)
 
 # Run
 * start testnet  
